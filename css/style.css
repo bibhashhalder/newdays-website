@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #b1b4be;
+}
+.header{
+    width: 80%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card{
+    width: 65%;
+    height: 300px;
+    border-radius: 8px;
+    background-color: #ffe4c4;
+    position: relative;
+}
+#img_pic{
+    width: 100%;
+    height: 100%;
+}
+#img_pic1{
+    position: absolute;
+    height: 60%;
+    width: 60%;
+    left: 22%;
+    top:  15%;
+    transform: translate(-50% -50%);
+    border-radius: 50%;
+}
+#image{
+    background: url(../image/images.jpg);
+    background-size: 100% 100%;
+}
+.image{
+    width: 100%;
+    height: 230px;
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px;
+}
+#image1{
+    position: relative;
+    background: url(../image/images.jpg);
+    background-size: 100% 100%;
+    animation: spin 5s ease-in-out infinite ;
+}
+#image2{
+    background: url(../image/earth.jpg);
+    background-size: cover;
+    background-repeat: calc(360);
+    animation: bg_rotate 60s linear infinite ;
+}
+#img_pic2{
+    width: 100%;
+    height: 100%; 
+}
+#img_pic3{
+    width: 100%;
+    height: 100%; 
+    border-radius: 8px;
+}
+#image3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    background: url(../image/earth.jpg);
+    background-size: cover;
+    background-repeat: calc(360);
+    animation: bg_rotate 60s linear infinite ; 
+}
+#card:hover #image3 {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.text{
+    margin-top: 50px;
+    color: #f0ec0b;
+    text-align: center;
+    
+}
+.text h1{
+   font-size: 30px;
+}
+@keyframes bg_rotate {
+     100%{
+        background-position: 720%;
+    }
+}
+@keyframes spin {
+    0%
+    {
+        background-image: url(../image/images.jpg);
+    }
+    50%
+    {
+        background-image: url(../image/images8.jpg);
+    }
+    100%
+    {
+       background-image: url(../image/images1.jpg); 
+    }
+}
